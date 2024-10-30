@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.kitten-editor-backdrop {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.418);
+    z-index: 999;
+    transition: all ease .3s; }
+.kitten-editor-modal {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.9);
+    position: relative;
+    background-color: #fff;
+    border-radius: 25px;
+    font-family: 'Lato';
+    transition: all ease .3s; }
+.kitten-modal-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 16px;
+    right: 16px; }
+.kitten-modal-close a.import {
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 40px;
+    background-color: #2acb26;
+    color: #fff;
+    font-weight: 500;
+    transition: all ease .3s; }
+.kitten-modal-close a.import:hover {
+    color: #fff;
+    transform: scale(1.05); }
+.kitten-modal-close a {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f7f7f7; }
+.kitten-modal-close a, .kitten-modal-close a:hover {
+    color: #6b6b6b; }
+.kitten-modal-header {
+    display: flex;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eeeeee; }
+.kitten-modal-header .logo {
+    display: flex;
+    align-items: center;
+    flex-basis: 26%; }
+.kitten-modal-header h3 {
+    color: #3f3f3f;
+    font-size: 20px;
+    font-weight: 900; }
+.kitten-modal-header ul {
+    display: flex;
+    padding: 5px;
+    background-color: #f3f3f3;
+    border-radius: 15px; }
+.kitten-modal-header ul li a {
+    cursor: pointer;
+    display: inline-block;
+    color: #9b9b9b;
+    padding: 10px 20px;
+    font-weight: 400;
+    font-size: 13px;
+    border-radius: 10px; }
+.kitten-modal-header ul li a.active {
+    background-image: linear-gradient(to right, #2acb26, #b0da39);
+    color: #fff; }
+.kitten-modal-content {
+    overflow-y: scroll;
+    height: 80vh;
+    width: 1100px;
+    background-color: #f8f8f8;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 30px 40px; }
+.kitten-modal-content .preview-page {
+    height: 100%; }
+.kitten-modal-content iframe {
+    width: 133%;
+    height: 125%;
+    zoom: .75;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.75);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.75);
+    -webkit-transform-origin: 0 0; }
+.kitten-modal-content .kitten-content-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.kitten-modal-content .content-load-single {
+    position: relative;
+    vertical-align: bottom;
+    height: 300px;
+    background-color: #ebebeb;
+    border-radius: 10px; }
+.kitten-modal-content 
+.content-load-single .load-text {
+    position: absolute;
+    bottom: 35px;
+    left: 15px;
+    width: 50%;
+    border-radius: 5px;
+    height: 15px;
+    background-color: #fff; }
+.kitten-modal-content 
+.content-load-single .load-desc {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 75%;
+    border-radius: 5px;
+    height: 8px;
+    background-color: #fff; }
+.kitten-modal-content .content-single {
+    overflow: hidden;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    transition: all ease .3s;
+    animation: .5s ease-out 0s 1 slideUp; }
+.kitten-modal-content .content-single:hover {
+    box-shadow: 1px 10px 5px 0px rgba(219,219,219,0.14);
+    -webkit-box-shadow: 1px 10px 5px 0px rgba(219,219,219,0.14);
+    -moz-box-shadow: 1px 10px 5px 0px rgba(219,219,219,0.14);
+    transform: translateY(-5px); }
+.kitten-modal-content .content-single img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    object-position: top; }
+.kitten-modal-content 
+.content-single .text-preview {
+    background-color: #fff;
+    padding: 15px; }
+.kitten-modal-content 
+.content-single .text-preview h3 {
+    font-size: 12px;
+    color: #747474;
+    font-weight: 600; }
+.content-single .text-preview span {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #9e9e9e; }
+
+
+/* Signin Form */
+.signin-logo {
+    margin-bottom: 20px;
+    text-align: center; }
+.signin-to {
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    width: 500px;
+    border-radius: 15px; }
+.signin-to .error-message {
+    padding: 15px 17px;
+    margin-bottom: 20px;
+    background-color: #fff2f2;
+    border: 1px solid #ffbfbf;
+    border-radius: 10px;
+}
+.signin-to .signin-form {
+    margin-bottom: 20px; }
+.signin-to .signin-form label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+    font-weight: 500; }
+.signin-to .signin-form input {
+    padding: 15px 15px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    color: #2d2d2d;
+    transition: all ease .3s; }
+.signin-to .signin-form input::placeholder {
+    color: #a5a5a5;
+}
+.signin-to .signin-form input:focus {
+    background-color: #ebebeb;
+}
+.signin-to .signin-form input::placeholder {
+    font-size: 14px;
+}
+
+.signin-to .signin-action {
+    margin-top: 30px;
+    text-align: right; }
+.signin-to .signin-action button {
+    cursor: pointer;
+    color: #fff;
+    background-image: linear-gradient(to right, #1d4ed8, #4338ca);
+    border: none;
+    padding: 12px 25px;
+    font-weight: 700;
+    border-radius: 10px; }

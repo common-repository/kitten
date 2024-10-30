@@ -1,0 +1,22 @@
+.toplevel_page_kitten .wp-menu-image img {
+    padding-top: 4px !important; }
+
+.kitten-notice-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px; }
+.kitten-notice-wrapper .logo {
+    display: flex; }
+.kitten-notice-wrapper .logo img {
+    width: 35px; }
+.kitten-notice-wrapper .logo h1 {
+    padding: 0;
+    padding-top: 6px;
+    font-size: 18px;
+    font-weight: 600; }
+.kitten-notice-wrapper p {
+    margin: 0;
+    font-weight: 500;
+    color: #999; }
+.kitten-notice-green {
+    border-left-color: #29cb26; }

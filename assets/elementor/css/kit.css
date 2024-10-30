@@ -1,0 +1,11 @@
+.elementor-add-kitten-button {
+    vertical-align: top;
+    background-color: #29cb26;
+    background-image: url(../../images/kitten-icon.png);
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-position: 40% 40%;
+    background-size: 32px auto; }
+.elementor-add-kitten-button i::before {
+    content: "";
+}
